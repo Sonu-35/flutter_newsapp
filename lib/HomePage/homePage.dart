@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_newsapp/HomePage/Widgets/newsTile.dart';
 import 'package:flutter_newsapp/HomePage/Widgets/trendingCard.dart';
+import 'package:flutter_newsapp/components/navigationBar.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -11,36 +12,7 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: Text("NEWS", style: Theme.of(context).textTheme.headlineLarge,),
       ),
-      bottomNavigationBar: Padding(padding: const EdgeInsets.all(8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            width: 200,
-            height: 60,
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.primaryContainer,
-              borderRadius: BorderRadius.circular(100),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(Icons.home,
-                size: 30,
-                color: Theme.of(context).colorScheme.secondaryContainer),
-                Icon(Icons.book,
-                size: 30, 
-                color: Theme.of(context).colorScheme.secondaryContainer),
-                Icon(Icons.settings,
-                size: 30, 
-                color: Theme.of(context).colorScheme.secondaryContainer),
-              ],
-            ),
-          )
-        ],
-      ),
-      ),
+      floatingActionButton: MyBottomNav(),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(

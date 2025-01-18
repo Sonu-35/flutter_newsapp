@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_newsapp/HomePage/Widgets/newsTile.dart';
-import 'package:flutter_newsapp/HomePage/Widgets/trendingCard.dart';
+import 'package:flutter_newsapp/pages/HomePage/Widgets/newsTile.dart';
+import 'package:flutter_newsapp/pages/HomePage/Widgets/trendingCard.dart';
 import 'package:flutter_newsapp/components/navigationBar.dart';
 
 class Homepage extends StatelessWidget {
@@ -12,7 +12,6 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: Text("NEWS", style: Theme.of(context).textTheme.headlineLarge,),
       ),
-      floatingActionButton: MyBottomNav(),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
